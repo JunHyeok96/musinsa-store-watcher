@@ -19,21 +19,26 @@ conn = pymysql.connect(
 
 cursor = conn.cursor(pymysql.cursors.DictCursor)
 
-data = crawling(100)
+data = crawling(10)
 
 price_sql = "INSERT INTO price(product_id, rank, price, del_price, rating, rating_count, created_date, coupon) values(%s,%s, %s, %s, %s, %s, %s, %s)"
-product_sql = "INSERT INTO product(product_id, img, product_name, product_url, brand, brand_url, modified_date, category, rank) values(%s,%s, %s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE product_id = %s, img = %s, product_name = %s, product_url = %s, brand = %s, brand_url = %s, modified_date = %s , category = %s, rank = %s"
+product_sql = """INSERT INTO product(product_id, img, product_name, product_url, brand, brand_url, modified_date, category, rank) 
+                values(%s,%s, %s, %s, %s, %s, %s, %s, %s) 
+                ON DUPLICATE KEY UPDATE 
+                product_id = values(product_id), img = values(img), product_name = values(product_name), product_url = values(product_url), brand = values(brand), 
+                brand_url = values(brand_url), modified_date = values(modified_date) , category = values(category), rank = values(rank)"""
 
 price_list=[]
 product_list=[]
 
 for d in data:
     price = (str(d["item_id"]), str(d["rank"]), str(d["price"]), str(d["del_price"]), d["rating"], str(d["rating_count"]), str(d["time"]), str(d["coupon"]))
-    product = (str(d["item_id"]), str(d["img"]), str(d["product_name"]), str(d["product_url"]), d["brand"], str(d["brand_url"]), str(d["time"]), d["category"],str(d["rank"]), str(d["item_id"]),  str(d["img"]), str(d["product_name"]), str(d["product_url"]), d["brand"], str(d["brand_url"]), str(d["time"]), d["category"], str(d["rank"]))
+    product = (str(d["item_id"]), str(d["img"]), str(d["product_name"]), str(d["product_url"]), d["brand"], str(d["brand_url"]), str(d["time"]), d["category"],str(d["rank"]))
     price_list.append(price)
-    cursor.execute(product_sql, product)
+    product_list.append(product)
 
 cursor.executemany(price_sql, price_list)
+cursor.executemany(product_sql, product_list)
 
 
 conn.commit()
