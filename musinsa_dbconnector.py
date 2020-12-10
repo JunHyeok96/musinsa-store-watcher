@@ -12,7 +12,7 @@ conn = pymysql.connect(
     user=AWS_RDS_USER,
     passwd=AWS_RDS_PASSWD,
     host=AWS_RDS_HOST,
-    port=AWS_RDS_PORT,
+    port=int(AWS_RDS_PORT),
     db=AWS_RDS_DB,
     charset='utf8'
 )
