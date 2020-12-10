@@ -5,11 +5,11 @@ from datetime import datetime
 from pytz import timezone
 import re
 
-def crawling(page_length):
+def crawling(start, end):
     data = []
     category = ['001', '002', '003', '004', '018', '005', '007', '020', '022', '008']
     kst = datetime.now(timezone('Asia/Seoul')).strftime('%Y-%m-%dT%H:%M')
-    for page in range(1,page_length+1):
+    for page in range(start,end+1):
         for c in category:
             try :
                 site = "https://search.musinsa.com/ranking/best?period=day&mainCategory="+ c +"&subCategory=&price=&newProduct=false&discount=false&soldOut=false&page="+str(page)+"&viewType=small&device=&priceMin=&priceMax="
@@ -48,6 +48,6 @@ def crawling(page_length):
                 item_dict["category"] = c
                 item_dict["time"] = kst
                 dict_list.append(item_dict)
-            print("category : "+ c + ", page : " + str(page) + " done")
             data.extend(dict_list)
+        print("page : " + str(page) + " done")
     return data;

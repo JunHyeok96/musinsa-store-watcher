@@ -1,12 +1,18 @@
 import pymysql
 import os
 from musinsa_crawler import crawling
+import sys
+
+start_page =int(sys.argv[1])
+end_page =int(sys.argv[2])
 
 AWS_RDS_USER=os.environ.get("AWS_RDS_USER")
 AWS_RDS_PORT=os.environ.get("AWS_RDS_PORT")
 AWS_RDS_PASSWD=os.environ.get("AWS_RDS_PASSWD")
 AWS_RDS_HOST=os.environ.get("AWS_RDS_HOST")
 AWS_RDS_DB=os.environ.get("AWS_RDS_DB")
+
+data = crawling(start_page, end_page)
 
 conn = pymysql.connect(
     user=AWS_RDS_USER,
@@ -18,8 +24,6 @@ conn = pymysql.connect(
 )
 
 cursor = conn.cursor(pymysql.cursors.DictCursor)
-
-data = crawling(10)
 
 price_sql = "INSERT INTO price(product_id, rank, price, del_price, rating, rating_count, created_date, coupon) values(%s,%s, %s, %s, %s, %s, %s, %s)"
 product_sql = """INSERT INTO product(product_id, img, product_name, product_url, brand, brand_url, modified_date, category, rank) 
