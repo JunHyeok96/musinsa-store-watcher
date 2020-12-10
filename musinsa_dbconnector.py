@@ -1,0 +1,39 @@
+import pymysql
+import os
+from musinsa_crawler import crawling
+
+AWS_RDS_USER=os.environ.get("AWS_RDS_USER")
+AWS_RDS_PORT=os.environ.get("AWS_RDS_PORT")
+AWS_RDS_PASSWD=os.environ.get("AWS_RDS_PASSWD")
+AWS_RDS_HOST=os.environ.get("AWS_RDS_HOST")
+AWS_RDS_DB=os.environ.get("AWS_RDS_DB")
+
+conn = pymysql.connect(
+    user=AWS_RDS_USER,
+    passwd=AWS_RDS_PASSWD,
+    host=AWS_RDS_HOST,
+    port=AWS_RDS_PORT,
+    db=AWS_RDS_DB,
+    charset='utf8'
+)
+
+cursor = conn.cursor(pymysql.cursors.DictCursor)
+
+data = crawling(100)
+
+price_sql = "INSERT INTO price(product_id, rank, price, del_price, rating, rating_count, created_date, coupon) values(%s,%s, %s, %s, %s, %s, %s, %s)"
+product_sql = "INSERT INTO product(product_id, img, product_name, product_url, brand, brand_url, modified_date, category, rank) values(%s,%s, %s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE product_id = %s, img = %s, product_name = %s, product_url = %s, brand = %s, brand_url = %s, modified_date = %s , category = %s, rank = %s"
+
+price_list=[]
+product_list=[]
+
+for d in data:
+    price = (str(d["item_id"]), str(d["rank"]), str(d["price"]), str(d["del_price"]), d["rating"], str(d["rating_count"]), str(d["time"]), str(d["coupon"]))
+    product = (str(d["item_id"]), str(d["img"]), str(d["product_name"]), str(d["product_url"]), d["brand"], str(d["brand_url"]), str(d["time"]), d["category"],str(d["rank"]), str(d["item_id"]),  str(d["img"]), str(d["product_name"]), str(d["product_url"]), d["brand"], str(d["brand_url"]), str(d["time"]), d["category"], str(d["rank"]))
+    price_list.append(price)
+    cursor.execute(product_sql, product)
+
+cursor.executemany(price_sql, price_list)
+
+
+conn.commit()
