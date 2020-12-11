@@ -2,7 +2,7 @@ name: python crawler
 
 on:
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '50 7 * * *'
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
       run: |
         python3 musinsa_dbconnector.py 1 10
 
-    - name: crawling 10-20 page
+    - name: crawling 11-20 page
       env:
         AWS_RDS_DB: ${{secrets.AWS_RDS_DB}}
         AWS_RDS_HOST: ${{secrets.AWS_RDS_HOST}}
@@ -41,7 +41,7 @@ jobs:
         AWS_RDS_PORT: ${{secrets.AWS_RDS_PORT}}
         AWS_RDS_USER: ${{secrets.AWS_RDS_USER}}
       run: |
-        python3 musinsa_dbconnector.py 10 20
+        python3 musinsa_dbconnector.py 11 20
 
     - name: action-slack
       uses: 8398a7/action-slack@v3
