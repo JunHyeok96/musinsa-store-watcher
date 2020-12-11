@@ -2,7 +2,7 @@ name: python crawler
 
 on:
   schedule:
-  - cron: 0 22 * * * 
+    - cron: '0 22 * * *'
 
 jobs:
   build:
@@ -11,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: crawler
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
