@@ -2,7 +2,7 @@ name: python crawler
 
 on:
   schedule:
-    - cron: '50 7 * * *'
+    - cron: '54 8 * * *'
 
 jobs:
   build:

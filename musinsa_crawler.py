@@ -15,6 +15,9 @@ def crawling(start, end):
                 site = "https://search.musinsa.com/ranking/best?period=day&mainCategory="+ c +"&subCategory=&price=&newProduct=false&discount=false&soldOut=false&page="+str(page)+"&viewType=small&device=&priceMin=&priceMax="
                 source = requests.get(site).text
                 soup = BeautifulSoup(source, "html.parser")
+                total_page_num = int(re.sub('<.+?>', '', str(soup.select('.totalPagingNum')[0])))
+                if total_page_num < page:
+                    continue
                 items = soup.select("#goodsRankList")[0].findAll("li", "li_box")
             except :
                 continue
