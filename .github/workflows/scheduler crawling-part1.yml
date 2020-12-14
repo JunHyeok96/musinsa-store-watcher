@@ -43,6 +43,10 @@ jobs:
       run: |
         python3 musinsa_dbconnector.py 11 20
 
+    - name: clear cache
+      run: |
+        curl http://www.musinsa.cf/api/v1/product/last-modified
+
     - name: action-slack
       uses: 8398a7/action-slack@v3
       with:
