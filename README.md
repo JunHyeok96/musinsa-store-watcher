@@ -20,5 +20,5 @@ http://www.musinsa.cf/
 ![image](https://user-images.githubusercontent.com/52908154/102999207-f76f0f00-456b-11eb-8690-913acfb062e8.png)
 ### 오늘 깜짝 할인
 ![image](https://user-images.githubusercontent.com/52908154/102999624-b6c3c580-456c-11eb-8922-1a130a1b210c.png)
-### 오늘 역대 최대가
+### 오늘 역대 최저가
 ![image](https://user-images.githubusercontent.com/52908154/102999396-42892200-456c-11eb-99ba-fa1a0132472f.png)
