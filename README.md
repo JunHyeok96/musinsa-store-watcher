@@ -10,11 +10,9 @@ http://www.musinsa.cf/
 
 ![image](https://user-images.githubusercontent.com/52908154/103759808-9cebad80-5057-11eb-8e24-d907bbb20e4e.png)  
 
+## Cluster 구조
 <img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=70%>
-                                                                                                                           
-## 서버 구조
-<img src="https://user-images.githubusercontent.com/52908154/102998868-613ae900-456b-11eb-9d36-396e0424e890.png" width=70%>
-
+                                                                                                                          
 ### 카테고리별 품목
 ![image](https://user-images.githubusercontent.com/52908154/102999366-38ffba00-456c-11eb-87c9-25a7d43253be.png)
 ### 브랜드별 품목
