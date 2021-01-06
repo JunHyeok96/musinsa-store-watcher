@@ -25,7 +25,7 @@ conn = pymysql.connect(
 
 cursor = conn.cursor(pymysql.cursors.DictCursor)
 
-price_sql = "INSERT INTO price(product_id, rank, price, del_price, rating, rating_count, created_date, coupon) values(%s,%s, %s, %s, %s, %s, %s, %s)"
+price_sql = "INSERT INTO price(product_id, rank, price, del_price, rating, rating_count, created_date, coupon, real_price) values(%s,%s, %s, %s, %s, %s, %s, %s, %s)"
 product_sql = """INSERT INTO product(product_id, img, product_name, product_url, brand, brand_url, modified_date, category, rank) 
                 values(%s,%s, %s, %s, %s, %s, %s, %s, %s) 
                 ON DUPLICATE KEY UPDATE 
@@ -36,7 +36,7 @@ price_list=[]
 product_list=[]
 
 for d in data:
-    price = (str(d["item_id"]), str(d["rank"]), str(d["price"]), str(d["del_price"]), d["rating"], str(d["rating_count"]), str(d["time"]), str(d["coupon"]))
+    price = (str(d["item_id"]), str(d["rank"]), str(d["price"]), str(d["del_price"]), d["rating"], str(d["rating_count"]), str(d["time"]), str(d["coupon"]), str(int(d["price"]) + int(d["coupon"])))
     product = (str(d["item_id"]), str(d["img"]), str(d["product_name"]), str(d["product_url"]), d["brand"], str(d["brand_url"]), str(d["time"]), d["category"],str(d["rank"]))
     price_list.append(price)
     product_list.append(product)
