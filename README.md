@@ -6,9 +6,12 @@ http://www.musinsa.cf/
 ## 크롤링
 <img src="https://user-images.githubusercontent.com/52908154/102998850-57b18100-456b-11eb-80da-1f5ba1b6a3b3.png" width=70%>
 
-## CI/CD 구조
-<img src="https://user-images.githubusercontent.com/52908154/102998861-5c763500-456b-11eb-9fff-b5a7bfc9c043.png" width=70%>
+## **CI/CD 구조**
 
+![image](https://user-images.githubusercontent.com/52908154/103759808-9cebad80-5057-11eb-8e24-d907bbb20e4e.png)  
+
+<img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=70%>
+                                                                                                                           
 ## 서버 구조
 <img src="https://user-images.githubusercontent.com/52908154/102998868-613ae900-456b-11eb-9d36-396e0424e890.png" width=70%>
 
