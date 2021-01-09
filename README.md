@@ -1,7 +1,7 @@
 # MUSINSA WATCHER
 무신사 스토어 가격 변동 파악 웹사이트입니다.  
 매일 크롤링을 통해 인기 랭킹 아이템을 수집하고 가격 비교를 제공합니다.   
-http://www.musinsa.cf/
+[무신사 왓쳐](https://www.musinsa.cf)
 
 ## 크롤링
 <img src="https://user-images.githubusercontent.com/52908154/102998850-57b18100-456b-11eb-80da-1f5ba1b6a3b3.png" width=70%>
