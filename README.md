@@ -19,10 +19,16 @@
 
 ![image](https://user-images.githubusercontent.com/52908154/103759808-9cebad80-5057-11eb-8e24-d907bbb20e4e.png)  
 
-## 트래픽 증가에 대응하기 위한 간단한 서버 확장 구조
-증가하는 트래픽에 따라 손 쉽게 노드를 확장할 수 있는 Container Orchestration 툴로 Kubernetes를 선택했습니다.
 <img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=50%>
               
+## Test
+Backend **테스트 커버리지 80%이상**을 목표로 잡고 있습니다. 
+jacoco를 도입하여 평균 라인 커버리지 80%, 브랜치 커버리지 80%을 넘지 못하면 빌드가 실패하게 구성했습니다.
+
+## Tech Stack
+<img src="https://user-images.githubusercontent.com/52908154/104377761-4c4de600-556a-11eb-98ea-2ab133e5bacc.png" width=70%>
+
+
 ## Service
 ### 랭킹 카테고리
 ![image](https://user-images.githubusercontent.com/52908154/104370807-bf535e80-5562-11eb-9ad1-339bd657b128.png)
