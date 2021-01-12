@@ -1,7 +1,7 @@
 # MUSINSA WATCHER!
   
 
-### [HomePage](https://www.musinsa.cf)
+### :house:[HomePage](https://www.musinsa.cf)
 
 ## :pencil:Writing
 #### [캐시 서버에 장애가 생긴다면?](https://jgrammer.tistory.com/entry/%EB%AC%B4%EC%8B%A0%EC%82%AC-watcher-%EC%BA%90%EC%8B%9C-%EC%84%9C%EB%B2%84%EC%97%90-%EC%9E%A5%EC%95%A0%EA%B0%80-%EC%83%9D%EA%B8%B4%EB%8B%A4%EB%A9%B4)
@@ -19,9 +19,11 @@
 
 ![image](https://user-images.githubusercontent.com/52908154/103759808-9cebad80-5057-11eb-8e24-d907bbb20e4e.png)  
 
-## Cluster 구조
-<img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=70%>
-                                                                                                                          
+## 트래픽 증가에 대응하기 위한 간단한 서버 확장 구조
+증가하는 트래픽에 따라 손 쉽게 노드를 확장할 수 있는 Container Orchestration 툴로 Kubernetes를 선택했습니다.
+<img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=50%>
+              
+## Service
 ### 랭킹 카테고리
 ![image](https://user-images.githubusercontent.com/52908154/104370807-bf535e80-5562-11eb-9ad1-339bd657b128.png)
 ### 오늘 깜짝 할인
