@@ -12,15 +12,21 @@
 무신사 스토어 가격 변동 파악 웹사이트입니다.  
 매일 크롤링을 통해 인기 랭킹 아이템을 수집하고 가격 비교를 제공합니다. 
 
+## 프로젝트 구조
+![image](https://user-images.githubusercontent.com/52908154/104835643-56b20c00-58eb-11eb-81b2-ae983386408a.png)
+
+
 ## Crawling
-<img src="https://user-images.githubusercontent.com/52908154/102998850-57b18100-456b-11eb-80da-1f5ba1b6a3b3.png" width=70%>
+<img src="https://user-images.githubusercontent.com/52908154/102998850-57b18100-456b-11eb-80da-1f5ba1b6a3b3.png" width=70%>  
+
+github action의 cron을 사용하여 크롤링 자동화를 구성하였습니다. 새로운 데이터는 마스터 DB에 저장되고 글로벌 캐시는 초기화 됩니다. 작업 결과를 slack으로 전송해 매일 정상적으로 데이터가 수집되는지 확인할 수 있습니다.
 
 ## **DevOps**
 
 ![image](https://user-images.githubusercontent.com/52908154/103759808-9cebad80-5057-11eb-8e24-d907bbb20e4e.png)  
 
 <img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=50%>
-              
+
 ## Test
 Backend **테스트 커버리지 80%이상**을 목표로 잡고 있습니다. 
 jacoco를 도입하여 평균 라인 커버리지 80%, 브랜치 커버리지 80%을 넘지 못하면 빌드가 실패하게 구성했습니다.
