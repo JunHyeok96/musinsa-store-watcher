@@ -8,6 +8,10 @@
 #### [페이징 성능 개선기](https://jgrammer.tistory.com/entry/%EB%AC%B4%EC%8B%A0%EC%82%AC-%EC%8A%A4%ED%86%A0%EC%96%B4-watcher-%ED%8E%98%EC%9D%B4%EC%A7%95-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0%EA%B8%B0?category=948604)
 #### [3번의 CI/CD 도입기](https://jgrammer.tistory.com/entry/%EB%AC%B4%EC%8B%A0%EC%82%AC-%EC%8A%A4%ED%86%A0%EC%96%B4-watcher-CICD-%EB%8F%84%EC%9E%85%EA%B8%B0?category=948604)  
 
+## Branch
+#### [Backend](https://github.com/JunHyeok96/Musinsa-Watcher/tree/backend-release)
+#### [front](https://github.com/JunHyeok96/Musinsa-Watcher/tree/front-release)
+
 ## 소개
 무신사 스토어 가격 변동 파악 웹사이트입니다.  
 매일 크롤링을 통해 인기 랭킹 아이템을 수집하고 가격 비교를 제공합니다. 
