@@ -36,13 +36,5 @@ jacoco를 도입하여 평균 라인 커버리지 80%, 브랜치 커버리지 80
 
 
 ## Service
-### 랭킹 카테고리
-![image](https://user-images.githubusercontent.com/52908154/104370807-bf535e80-5562-11eb-9ad1-339bd657b128.png)
-### 오늘 깜짝 할인
-![image](https://user-images.githubusercontent.com/52908154/104370846-c9755d00-5562-11eb-89b4-1e1466a4a0ca.png)
-### 브랜드 조회
-![image](https://user-images.githubusercontent.com/52908154/104370889-dabe6980-5562-11eb-914c-ef9cf5d1ad14.png)
-### 가격 변동 차트
-![image](https://user-images.githubusercontent.com/52908154/104371184-faee2880-5562-11eb-8696-bf6eade454f1.png)
-### 오늘 역대 최저가
-![image](https://user-images.githubusercontent.com/52908154/104371291-05a8bd80-5563-11eb-9ddc-8dfb48ebab2a.png)
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/52908154/105448142-14a51380-5cb9-11eb-96d5-31d4183ff3aa.gif)
+
