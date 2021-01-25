@@ -26,7 +26,7 @@
 github action의 cron을 사용하여 크롤링 자동화를 구성하였습니다. 새로운 데이터는 마스터 DB에 저장되고 글로벌 캐시는 초기화 됩니다. 작업 결과를 slack으로 전송해 매일 정상적으로 데이터가 수집되는지 확인할 수 있습니다.
 
 ## **DevOps**
-
+급증하는 트래픽에도 대응할 수 있도록 컨테이너 오케스트레이션 툴로 NCP kubernetes service를 사용했습니다. 
 ![image](https://user-images.githubusercontent.com/52908154/103759808-9cebad80-5057-11eb-8e24-d907bbb20e4e.png)  
 
 <img src="https://user-images.githubusercontent.com/52908154/103761935-d245ca80-505a-11eb-9e68-2657ab38973f.png" width=50%>
@@ -41,5 +41,5 @@ jacoco를 도입하여 평균 라인 커버리지 80%, 브랜치 커버리지 80
 
 
 ## Service
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/52908154/105448142-14a51380-5cb9-11eb-96d5-31d4183ff3aa.gif)
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/52908154/105745125-4a7c1d80-5f81-11eb-8365-abeee51ffe95.gif)
 
