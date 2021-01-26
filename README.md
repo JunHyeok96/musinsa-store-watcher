@@ -41,5 +41,5 @@ jacoco를 도입하여 평균 라인 커버리지 80%, 브랜치 커버리지 80
 
 
 ## Service
-![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/52908154/105745125-4a7c1d80-5f81-11eb-8365-abeee51ffe95.gif)
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/52908154/105810112-b7c59800-5fed-11eb-87c6-d863bd77ac67.gif)
 
