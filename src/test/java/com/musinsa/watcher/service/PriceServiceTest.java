@@ -7,7 +7,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import com.musinsa.watcher.domain.price.slave.PriceSlaveRepository;
-import com.musinsa.watcher.web.dto.PriceResponseDto;
+import com.musinsa.watcher.web.dto.product.PriceResponseDto;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;

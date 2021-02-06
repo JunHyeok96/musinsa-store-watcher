@@ -250,6 +250,7 @@ public class ProductQuerySlaveRepositoryTest {
           .rank(1)
           .rating(11)
           .ratingCount(120)
+          .createdDate(LocalDateTime.now())
           .build());
       Thread.sleep(1000);
     }

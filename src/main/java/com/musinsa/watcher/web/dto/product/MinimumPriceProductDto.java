@@ -1,4 +1,4 @@
-package com.musinsa.watcher.web.dto;
+package com.musinsa.watcher.web.dto.product;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package com.musinsa.watcher.web.dto;
+package com.musinsa.watcher.web.dto.product;
 
 import com.musinsa.watcher.domain.price.Price;
 import java.io.Serializable;

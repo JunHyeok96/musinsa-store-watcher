@@ -2,6 +2,7 @@ package com.musinsa.watcher.web.dto;
 
 import static org.junit.Assert.*;
 
+import com.musinsa.watcher.web.dto.product.MinimumPriceProductDto;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.Instant;

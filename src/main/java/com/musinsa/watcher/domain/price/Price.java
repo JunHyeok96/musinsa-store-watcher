@@ -2,6 +2,7 @@ package com.musinsa.watcher.domain.price;
 
 import com.musinsa.watcher.domain.BaseTimeEntity;
 import com.musinsa.watcher.domain.product.Product;
+import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
@@ -12,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 @Entity
-public class Price extends BaseTimeEntity {
+public class Price {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,9 +45,11 @@ public class Price extends BaseTimeEntity {
 
   private int ratingCount;
 
+  private LocalDateTime createdDate;
+
   @Builder
   public Price(Product product, int rank, int price, int delPrice, int coupon, float rating,
-      int ratingCount) {
+      int ratingCount, LocalDateTime createdDate) {
     this.product = product;
     this.rank = rank;
     this.price = price;
@@ -52,5 +57,6 @@ public class Price extends BaseTimeEntity {
     this.coupon = coupon;
     this.rating = rating;
     this.ratingCount = ratingCount;
+    this.createdDate = createdDate;
   }
 }

@@ -2,6 +2,7 @@ package com.musinsa.watcher.web.dto;
 
 import static org.junit.Assert.*;
 
+import com.musinsa.watcher.web.dto.product.DiscountedProductDto;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
