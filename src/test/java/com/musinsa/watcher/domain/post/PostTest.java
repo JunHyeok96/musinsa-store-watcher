@@ -6,13 +6,17 @@ import com.musinsa.watcher.domain.post.master.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-@RequiredArgsConstructor
 @DataJpaTest
+@RunWith(SpringRunner.class)
 public class PostTest {
 
-  private final PostRepository postRepository;
+  @Autowired
+  private PostRepository postRepository;
 
   @Test
   @DisplayName("게시글을 등록 한다.")

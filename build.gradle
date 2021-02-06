@@ -37,7 +37,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it,
-                    exclude: ["**/QA*", "**/QP*", "**/QB*"])
+                    exclude: ["**/QA*", "**/QP*", "**/QB*", "**/QU*", "**/QC*"])
         }))
     }
 }
